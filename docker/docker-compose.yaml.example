@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+    web:
+        build: ../web
+        ports:
+            - 3000:3000
+        environment:
+            SUPABASE_PUBLIC_API_KEY: 
+            SUPABASE_API_URL: 
+        volumes:
+            - ../web:/app
+    console:
+        build: ../console
+        ports:
+            - 5000:3000
+        environment:
+            SUPABASE_PUBLIC_API_KEY: 
+            SUPABASE_API_URL: 
+        volumes:
+            - ../console:/app
