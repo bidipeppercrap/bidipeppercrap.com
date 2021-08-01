@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    manager:
+        build: ./dockerfiles/manager
+        image: bidipeppercrap-manager
+        volumes:
+            - ../web:/home/node/web
+            - ../web-console:/home/node/web-console

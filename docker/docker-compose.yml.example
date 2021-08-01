@@ -10,14 +10,14 @@ services:
             SUPABASE_PUBLIC_API_KEY: 
             SUPABASE_API_URL: 
         volumes:
-            - ../web:/app
-    console:
-        build: ./dockerfiles/console
-        image: bidipeppercrap-console
+            - ../web:/home/node
+    web-console:
+        build: ./dockerfiles/web-console
+        image: bidipeppercrap-web-console
         ports:
             - 5000:3000
         environment:
             SUPABASE_PUBLIC_API_KEY: 
             SUPABASE_API_URL: 
         volumes:
-            - ../console:/app
+            - ../web-console:/home/node
