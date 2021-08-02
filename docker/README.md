@@ -7,7 +7,7 @@ Once you have that done, you can build and run the image with:
 
 ```
 $ docker-compose build
-$ docker-compose run -d
+$ docker-compose up -d
 ```
 
 ## Manager
